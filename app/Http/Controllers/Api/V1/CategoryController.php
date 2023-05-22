@@ -65,10 +65,10 @@ class CategoryController extends Controller
             'to' => $category->lastItem(),
             'total' => $category->total(),
         ];
-=======
+
         $category->id;
         // $user->save();
->>>>>>> Stashed changes
+
 
         return response()->json([
             'status' => true,
@@ -79,8 +79,7 @@ class CategoryController extends Controller
 
     public function getCategory()
     {
-<<<<<<< Updated upstream
-=======
+
 
         // if (!$request->header('Authorization')) {
         //     return response()->json([
@@ -103,7 +102,6 @@ class CategoryController extends Controller
         // }
 
 
->>>>>>> Stashed changes
         $category = Category::get();
         
         if (!$category) {
@@ -134,16 +132,13 @@ class CategoryController extends Controller
         return response()->json([
             'status' => true,
             'message' => 'this is all Categories ',
-<<<<<<< Updated upstream
             'data' => $data,
-=======
             'data' => [
                 'current_page'=>1,
                 [
                 'categories' => $category
                 ],
             ],
->>>>>>> Stashed changes
         ]);
     }
 
